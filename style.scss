@@ -1,0 +1,98 @@
+@mixin center_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+$color_container:#1A182D;
+$color_card:#141324;
+
+body{
+
+    padding: 0;
+    margin: 0;
+    background-color: #333333;
+    @include center_item();
+  
+}
+
+.contaier{
+    width: 1600px;
+    height: 1200px;
+    background-color: $color_container;
+    @include center_item();
+  
+
+    .card{
+        width: 739px;
+        height: 545px;
+        background-color: $color_card;
+        @include center_item();
+        flex-direction: column;
+        
+        h4{
+            color:#D1D5E5;
+            font-size: 28px;
+        }
+
+        .user_container{
+            width: 500px;
+            height: 190px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 68px;
+            margin-top: 30px;
+
+            .user{
+                width: 150px;
+                height: 190px;
+                background-color: $color_container;
+                border-radius: 10px;
+                @include center_item();
+                flex-direction: column;
+
+
+                .image{
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-color: $color_card;
+                    margin-bottom: 20px;
+                    
+
+                }
+                .name{
+                    color:#D1D5E5;
+                }
+                
+                .add i{
+                    color:#5A9EE2;
+                    font-size: 33px;   
+                    margin-bottom: 60px;
+                }
+                .add_user{
+                    color:#5A9EE2;
+
+                }
+        
+            }
+
+        }
+
+        button{
+            width: 194px;
+            height: 45px;
+            border-radius: 22.5px;
+            background-color: $color_card;
+            color:#5A9EE2;
+            border-color:#5A9EE2;
+            &:hover{
+                background-color: #5A9EE2;
+                color: #D1D5E5;
+            }
+        }
+
+    }
+}
+
